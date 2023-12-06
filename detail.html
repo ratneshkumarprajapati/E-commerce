@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="favicon.png" type="image">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ocean.com/sign up</title>
+    <link rel="stylesheet" href="style1.css">
+
+</head>
+
+<body>
+    <video autoplay muted loop plays-inline class="back">
+        <source src="video1.mp4" >
+    </video>
+    <h1>Welcome to Ocean Shopping<hr> </h1>
+    <div class="container">
+
+        <form aciton="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
+            <div class="formdesign" id="name"> <input type="text" name="fname" required placeholder="Name"><b><span
+                        class="formerror"> </span></b>
+            </div>
+
+            <div class="formdesign" id="email">
+                <input type="email" name="femail" required placeholder="Email"><b><span class="formerror"> </span></b>
+            </div>
+
+            <div class="formdesign" id="phone">
+                <input type="phone" name="fphone" required placeholder="Phone"><b><span class="formerror"></span></b>
+            </div>
+
+            <div class="formdesign" id="pass">
+                <input type="password" name="fpass" required placeholder="password"><b><span
+                        class="formerror"></span></b>
+            </div>
+
+            <div class="formdesign" id="cpass">
+                 <input type="password" name="fcpass" required placeholder="Conform password"><b><span
+                        class="formerror"></span></b>
+            </div>
+            <div class="formdesign1">
+                <input id="btn" type="submit"  value="Sign Up" onclick="window.location.href='index.html'">
+
+            </div>
+
+
+
+        </form>
+
+    </div>
+
+</body>
+<script>
+    function clearErrors() {
+
+        errors = document.getElementsByClassName('formerror');
+        for (let item of errors) {
+            item.innerHTML = "";
+        }
+
+
+    }
+    function seterror(id, error) {
+        //sets error inside tag of id 
+        element = document.getElementById(id);
+        element.getElementsByClassName('formerror')[0].innerHTML = error;
+
+    }
+
+    function validateForm() {
+        var returnval = true;
+        clearErrors();
+
+        //perform validation and if validation fails, set the value of returnval to false
+        var name = document.forms['myForm']["fname"].value;
+        if (name.length < 5) {
+            seterror("name", "\n*Length of name is too short");
+            returnval = false;
+        }
+
+        if (name.length == 0) {
+            seterror("name", "\n*Length of name cannot be zero!");
+            returnval = false;
+        }
+
+        var email = document.forms['myForm']["femail"].value;
+        if (email.length > 50) {
+            seterror("email", "\n*Email length is too long");
+            returnval = false;
+        }
+
+        var phone = document.forms['myForm']["fphone"].value;
+        if (phone.length != 10) {
+            seterror("phone", "\n*Phone number should be of 10 digits!");
+            returnval = false;
+        }
+
+        var password = document.forms['myForm']["fpass"].value;
+        if (password.length < 6) {
+
+            // Quiz: create a logic to allow only those passwords which contain atleast one letter, one number and one special character and one uppercase letter
+            seterror("pass", "\n*Password should be atleast 6 characters long!");
+            returnval = false;
+        }
+
+        var cpassword = document.forms['myForm']["fcpass"].value;
+        if (cpassword != password) {
+            seterror("cpass", "\n*Password and Confirm password should match!");
+            returnval = false;
+        }
+
+        return returnval;
+    }
+
+</script>
+
+
+</html>

@@ -1,0 +1,103 @@
+.formdesign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    size: 10px;
+    font-size: 15px;
+
+
+}
+
+.formdesign input {
+    width: 350px;
+    height: 35px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+h1 {
+    height: 100px;
+    width: 450px;
+    margin: auto;
+    padding: 20px;
+    font-size: 35px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: beige;
+
+}
+
+.container {
+    /* border: 2px solid red; */
+    padding: 10px;
+    margin-left: 400px;
+    margin-right: 400px;
+    /* background-color: rgb(7, 62, 92); */
+
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    /* height: 500px;
+width: 50%; */
+    /* border-radius: 10px; */
+}
+
+#cpass {
+    display: block;
+
+}
+
+.formdesign1 input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+
+}
+
+#btn {
+    width: 75px;
+    margin: auto;
+    height: 35px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: rgb(84, 84, 236);
+    cursor: pointer;
+
+}
+
+body {
+    /* background-image: url(https://media.istockphoto.com/id/1328916700/vector/digital-technology-wave-abstract-background-with-dots-moving-in-space-futuristic-modern.jpg?s=612x612&w=0&k=20&c=2KjxF5XdKgaDySstsmpbOzY9NiReNbO_1c7YiS2wZKc=); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.back {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+}
+
+@media(min-aspect-ratio:16/9) {
+    .back {
+        width: 100%;
+        height: auto;
+
+    }
+}
+
+@media(max-aspect-ratio:16/9) {
+    .back {
+        height: 100%;
+        width: auto;
+
+    }
+}

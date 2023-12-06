@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="favicon.png" type="image">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-in</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'varela Round', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/wave-haikei.svg');
+    background-size: cover;
+    animation: move 15s linear alternate infinite;
+}
+
+@keyframes move {
+    50% {
+        background-position: 50%;
+    }
+}
+
+.Login-box {
+    width: 400px;
+    height: min-content;
+    padding: 40px;
+    background: white;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 0 10px hsla(308, 83%, 40%, 0.959);
+}
+
+.Login-box h2 {
+    font-size: 2.2rem;
+}
+
+.Login-box p {
+    color: #32ac21;
+    margin-top: 4px;
+    font-size: 1.2rem;
+}
+
+form {
+    text-align: left;
+    margin-top: 30px;
+}
+
+form.form-group {
+    margin: 18px 0;
+}
+
+form .form-group label {
+    display: block;
+    font-size: 20px;
+    color: hsla(308, 83%, 40%, 0.959);
+}
+form .form-group input {
+    width: 100%;
+    height: 40px;
+    margin-top: 6px;
+    padding: 0 12px 0 12px;
+    border: 2px solid #c4c4c4;
+    border-radius: 3px;
+    font-size: 18px;
+    color: #0fad44;
+    transition: .3s;
+}
+
+form .form-group input:focus {
+    border-color: #85abca;
+    background: #90cad8
+}
+
+
+form .form-group input:valid {
+    border-color: #124ce7;
+    background: #e4edff
+}
+
+form .form-group i {
+    position: absolute;
+    color: hsla(308, 83%, 40%, 0.959);
+    font-size: 20px;
+    transform: translateX(12px) translateY(8px);
+}
+
+form .forgot {
+    cursor: pointer;
+    color: blue;
+    font-size: 18px;
+}
+
+form .forgot:hover {
+    color: blue;
+}
+
+form input[type=submit] {
+    cursor: pointer;
+    width: 100%;
+    height: 46px;
+    border-radius: 3px;
+    font-size: 22px;
+    margin-top: 28px;
+    color: #fff;
+    background: linear-gradient(
+        0deg,#124ce7,#3784ff
+    );
+}
+
+h1 {
+    color:hsla(308, 83%, 40%, 0.959);
+}
+
+p {
+    color:hsla(308, 83%, 40%, 0.959);
+}
+
+a {
+    color:hsla(308, 83%, 40%, 0.959);
+    cursor: pointer
+}
+
+#search {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 90px;
+    border-radius: 32px;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    font: 13px "Helvetica Neue", Arial, sans-serif;
+    padding: 4px 10px;
+    border: none;
+    background: whitesmoke;
+    margin-bottom: 0;
+    outline: none;
+    opacity: 0.7;
+    color: #a81515;
+  }
+  #search:focus {
+    width: 120px;
+    opacity: 1.0; 
+  }
+  .login-box{
+    border: 2px solid hsla(308, 83%, 40%, 0.959);
+    padding: 30px;
+  }
+    </style>
+</head>
+<body>
+    <!-- <input id="search" type="text" placeholder="search" autocomplete="off"></input> -->
+   <div class="login-box">
+        <h1>
+            Welcome to Ocean Shopping
+        </h1>
+        <p>
+            Enter your details
+        </p>
+        <form>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <i class="bx bxs-user"></i>
+                <input 
+                    type="email"
+                    id="email"
+                    placeholder="your email"
+                    required
+                >
+            </div>
+            <div class="form-group">
+                <label for=""password>Password</label>
+                <i class="bx bxs-key"></i>
+                <input 
+                    type="password"
+                    id="password"
+                    placeholder="your password"
+                    required
+                >
+            </div>
+            <a class="forget">
+                Forget your password?
+            </a><br>
+            <a href="detail.html" class="new">New User sign Up</a>
+            <input type="submit" value="Log in" onclick="window.location.href='index.html'">
+        </form>
+   </div> 
+</body>
+</html>
